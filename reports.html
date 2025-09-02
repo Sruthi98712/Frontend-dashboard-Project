@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="dashboard.css">
+ 
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <h2>My Dashboard</h2>
+      <a href="dashboard.html">🏠 Home</a>
+      <a href="profile.html">👤 Profile</a>
+      <a href="projects.html">📂 Projects</a>
+      <a href="settings.html">⚙️ Settings</a>
+      <a href="reports.html">📊 Reports</a>
+         <a href="help.html">❓ Help</a>
+      <a href="support.html">🛠 Support</a>
+      <a href="feedback.html">✍️ Feedback</a>
+      <a href="analytics.html">📈 Analytics</a>
+      <a href="documents.html">📁 Documents</a>
+      <a href="notifications.html">🔔 Notifications</a>
+      <a href="messages.html">💬 Messages</a>
+      <a href="tasks.html">📝 Tasks</a>
+      <a href="calendar.html">📅 Calendar</a>
+    </div>
+    <a href="login.html" class="logout">🚪 Logout</a>
+  </div>
+
+  <div class="main">
+    <div class="reports-box">
+      <h2>📊 Reports & Analytics</h2>
+
+      <div class="chart-container">
+        <canvas id="salesChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="usersChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Sales Chart
+    const salesCtx = document.getElementById('salesChart').getContext('2d');
+    new Chart(salesCtx, {
+      type: 'line',
+      data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        datasets: [{
+          label: "Sales (in $)",
+          data: [1200, 1900, 1500, 2200, 3000, 2500],
+          borderColor: "#f39c12",
+          backgroundColor: "rgba(243,156,18,0.2)",
+          borderWidth: 3,
+          tension: 0.4
+        }]
+      },
+      options: { responsive: true }
+    });
+
+    // Users Growth Chart
+    const usersCtx = document.getElementById('usersChart').getContext('2d');
+    new Chart(usersCtx, {
+      type: 'bar',
+      data: {
+        labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
+        datasets: [{
+          label: "New Users",
+          data: [50, 120, 180, 240],
+          backgroundColor: "#3498db"
+        }]
+      },
+      options: { responsive: true }
+    });
+  </script>
+</body>
+</html>

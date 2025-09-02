@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <style>
+    /* Calendar specific */
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .event-card {
+      background: #fff;
+      color: #333;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .event-card h4 {
+      margin-top: 0;
+      color: #764ba2;
+    }
+
+    .event-date {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hamburger + Sidebar
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="overlay" id="overlay"></div> -->
+
+  <div class="sidebar" id="sidebar">
+    <div>
+      <h2>My Dashboard</h2>
+      <a href="home.html">🏠 Home</a>
+      <a href="profile.html">👤 Profile</a>
+      <a href="projects.html">📂 Projects</a>
+      <a href="settings.html">⚙️ Settings</a>
+      <a href="reports.html">📊 Reports</a>
+      <a href="help.html">❓ Help</a>
+      <a href="support.html">🛠 Support</a>
+      <a href="feedback.html">✍️ Feedback</a>
+      <a href="analytics.html">📈 Analytics</a>
+      <a href="documents.html">📁 Documents</a>
+      <a href="notifications.html">🔔 Notifications</a>
+      <a href="messages.html">💬 Messages</a>
+      <a href="tasks.html">📝 Tasks</a>
+      <a href="calendar.html">📅 Calendar</a>
+    </div>
+    <a href="login.html" class="logout">🚪 Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="welcome">
+      <h1>📅 Daily Calendar</h1>
+      <p>Here’s a quick overview of your daily events.</p>
+    </div>
+
+    <div class="calendar">
+      <div class="card">
+        <div class="event-date">2025-09-01, 10:00 AM</div>
+        <h4>Team Meeting</h4>
+        <p>Discuss project milestones and tasks for the week.</p>
+      </div>
+
+      <div class="card">
+        <div class="event-date">2025-09-01, 1:00 PM</div>
+        <h4>Client Call</h4>
+        <p>Update client on progress and next steps.</p>
+      </div>
+
+      <div class="card">
+        <div class="event-date">2025-09-01, 3:30 PM</div>
+        <h4>Code Review</h4>
+        <p>Review pull requests submitted by team members.</p>
+      </div>
+
+      <div class="card">
+        <div class="event-date">2025-09-01, 5:00 PM</div>
+        <h4>Report Submission</h4>
+        <p>Submit the daily progress report to the manager.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar toggle JS -->
+  <!-- <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.toggle('closed');
+      overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('closed');
+      overlay.classList.remove('active');
+    });
+  </script> -->
+</body>
+</html>

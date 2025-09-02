@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="dashboard.css">
+ 
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <h2>My Dashboard</h2>
+      <a href="home.html">🏠 Home</a>
+      <a href="dashboard.html">📊 Dashboard</a>
+      <a href="profile.html">👤 Profile</a>
+      <a href="settings.html">⚙️ Settings</a>
+      <a href="reports.html">📑 Reports</a>
+         <a href="help.html">❓ Help</a>
+      <a href="support.html">🛠 Support</a>
+      <a href="feedback.html">✍️ Feedback</a>
+      <a href="analytics.html">📈 Analytics</a>
+      <a href="documents.html">📁 Documents</a>
+      <a href="notifications.html">🔔 Notifications</a>
+      <a href="messages.html">💬 Messages</a>
+      <a href="tasks.html">📝 Tasks</a>
+      <a href="calendar.html">📅 Calendar</a>
+    </div>
+    <a href="login.html" class="logout">🚪 Logout</a>
+  </div>
+
+
+   <div class="settings-box">
+  <h2><b>⚙️ Settings</b></h2>
+
+  <div class="settings-option">
+    <label>
+      <input type="checkbox" id="darkMode"> Enable Dark Mode
+    </label>
+  </div>
+
+  <div class="settings-option">
+    <label>
+      <input type="checkbox" id="emailNotif"> Enable Email Notifications
+    </label>
+  </div>
+
+  <div class="settings-option">
+    <label>
+      <input type="checkbox" id="smsNotif"> Enable SMS Notifications
+    </label>
+  </div>
+
+  <div class="settings-option">
+    <label>
+      <input type="checkbox" id="soundNotif"> Enable Sound Alerts
+    </label>
+  </div>
+
+  <div class="settings-option">
+    <label for="language">🌍 Language Preference:</label>
+    <select id="language">
+      <option>English</option>
+      <option>हिन्दी</option>
+      <option>తెలుగు</option>
+      <option>தமிழ்</option>
+    </select>
+  </div>
+
+  <div class="settings-option">
+    <label for="theme">🎨 Theme:</label>
+    <select id="theme">
+      <option value="default">Default</option>
+      <option value="light">Light</option>
+      <option value="colorful">Colorful</option>
+    </select>
+  </div>
+
+  <div class="settings-option">
+    <label>
+      <input type="checkbox" id="privacy"> Show my profile publicly
+    </label>
+  </div>
+
+  <div class="settings-option">
+    <label for="password">🔑 Change Password:</label><br>
+    <input type="password" id="password" placeholder="Enter new password">
+  </div>
+
+  <button style="margin-top:15px; padding:10px 20px; border:none; border-radius:6px; background:#f39c12; color:#fff; cursor:pointer;">
+    Save Settings
+  </button>
+</div>
+
+
+  <script> 
+    document.getElementById("theme").addEventListener("change", (e) => {
+  if(e.target.value === "light"){
+    document.body.style.background = "#f9f9f9";
+    document.body.style.color = "#000";
+  } else if(e.target.value === "colorful"){
+    document.body.style.background = "linear-gradient(135deg, #ff9a9e, #fad0c4)";
+  } else {
+    document.body.style.background = "linear-gradient(135deg, #667eea, #764ba2)";
+  }
+});
+  </script>
+</body>
+</html>

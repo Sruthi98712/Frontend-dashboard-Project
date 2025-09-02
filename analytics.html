@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analytics</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <!-- Hamburger -->
+<div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+<br/>
+  <div class="sidebar">
+    <div>
+      <h2>My Dashboard</h2>
+      <a href="home.html">🏠 Home</a>
+      <a href="dashboard.html">📊 Dashboard</a>
+      <a href="profile.html">👤 Profile</a>
+      <a href="projects.html">📂 Projects</a>
+      <a href="settings.html">⚙️ Settings</a>
+      <a href="reports.html">📑 Reports</a>
+      <a href="feedback.html">✍️ Feedback</a>
+      <a href="analytics.html">📈 Analytics</a>
+      <a href="documents.html">📁 Documents</a>
+      <a href="notifications.html">🔔 Notifications</a>
+      <a href="messages.html">💬 Messages</a>
+    </div>
+    <a href="login.html" class="logout">🚪 Logout</a>
+  </div>
+
+  <div class="main">
+    <div class="welcome">
+      <h1>📈 Analytics</h1>
+      <p>View insights and performance metrics.</p>
+    </div>
+  </div>
+  <script>
+const hamburger = document.getElementById('hamburger');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+
+hamburger.addEventListener('click', () => {
+  sidebar.classList.toggle('closed');
+  overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+  sidebar.classList.add('closed');
+  overlay.classList.remove('active');
+});
+</script>
+
+</body>
+</html>

@@ -7,15 +7,7 @@
   <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-  <!-- Hamburger -->
-<div class="hamburger" id="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
 
-<!-- Overlay -->
-<div class="overlay" id="overlay"></div>
 <br/>
   <div class="sidebar">
     <div>
@@ -41,21 +33,7 @@
       <p>View insights and performance metrics.</p>
     </div>
   </div>
-  <script>
-const hamburger = document.getElementById('hamburger');
-const sidebar = document.getElementById('sidebar');
-const overlay = document.getElementById('overlay');
-
-hamburger.addEventListener('click', () => {
-  sidebar.classList.toggle('closed');
-  overlay.classList.toggle('active');
-});
-
-overlay.addEventListener('click', () => {
-  sidebar.classList.add('closed');
-  overlay.classList.remove('active');
-});
-</script>
-
+  
 </body>
 </html>
+
